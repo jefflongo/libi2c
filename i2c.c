@@ -6,12 +6,11 @@ inline bool i2c_master_init(void) {
     return _i2c_master_init_impl();
 }
 
-inline bool
-  i2c_master_write(const uint8_t device, const uint8_t reg, const void* buf, uint16_t len) {
+inline bool i2c_master_write(const uint8_t device, const uint8_t reg, const void* buf, size_t len) {
     return _i2c_master_write_impl(device, reg, buf, len);
 }
 
-inline bool i2c_master_read(const uint8_t device, const uint8_t reg, void* buf, uint16_t len) {
+inline bool i2c_master_read(const uint8_t device, const uint8_t reg, void* buf, size_t len) {
     return _i2c_master_read_impl(device, reg, buf, len);
 }
 
